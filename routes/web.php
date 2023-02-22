@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LaraappliController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,5 +17,6 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-
-// Route::get('/', []);
+Route::get('/', [LaraappliController::class, 'index']);
+Route::post('/create', [LaraappliController::class, 'create']);
+Route::get('/thanks', [LaraappliController::class, 'thanks']);

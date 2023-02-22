@@ -7,21 +7,30 @@
   <title>Document</title>
 </head>
 <style>
-  
+th {
+  text-align: left;
+}
 </style>
 <body>
-  <form action="/thanks" method="post">
-    <table>
-      <tr>
-        <th>氏名</th><br>
-        <td><input type="text" name="name" /></td>
-      </tr>
-      <tr>
-        <th>メールアドレス</th><br>
-        <td><input tyep="email" name="email" /></td>
-      </tr>
-      <tr>
-        <button type="submit" class="send_button">送信する</button>
-      </tr>
+  <table>
+    <form action="/create" method="POST">
+      @csrf
+        <tr>
+          <th>氏名</th>
+        </tr>
+        <tr>
+          <td><input type="text" name="name" /></td>
+        </tr>
+        <tr>
+          <th>メールアドレス</th>
+        </tr>
+        <tr>
+          <td><input tyep="email" name="email" /></td>
+        </tr>
+        <tr>
+          <td><button>送信する</button></td>
+        </tr>
+    </form>
+  </table>
 </body>
 </html>
